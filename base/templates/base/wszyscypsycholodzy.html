@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1> przegląd lekarzy </h1>
+
+<div> Znajdź psychologa i zapisz się na wizytę</div>
+<div>
+    <select label = "dodatkowe filtry">
+        <option selected>filtry</option>
+        <option>płeć</option>
+        <option>NFZ</option>
+        <option>online/ofline</option>
+        <option>zakres ceny</option>
+    </select>
+    <select label = "miasto">
+        <option selected>miasto</option>
+        <option>Warszawa</option>
+        <option>Poznań</option>
+        <option>Wrocław</option>
+        <option>Kraków</option>
+    </select>
+    <select placeholder = "specjalizacja">
+        <option selected>specjalizacja</option>
+        <option>Psycholog</option>
+        <option>Psycholog dziecięcy</option>
+        <option>Psychiatra</option>
+        <option>Seksuolog</option>
+        <option>Neuropsycholog</option>
+        <option>Psychoonkolog</option>
+        <option>Psycholog sportu</option>
+        <option>Psycholog biznesu</option>
+        <option>Psychoterapeuta</option>
+        <option>Pedagog</option>
+    </select>
+    
+    <select placeholder = "forma terapii">
+        <option selected>forma terapii</option>
+        <option>indywidualna</option>
+        <option>grupowa</option>
+        <option>rodzinna</option>
+        <option>dla par</option>
+        <option>dziecięca</option>
+    </select>
+
+    
+    <select placeholder = "nurt terapeutyczny">
+        <option selected>nurt terapeutyczny</option>
+        <option>Psychoanalityczny</option>
+        <option>Psychodynamiczny</option>
+        <option>Poznawczo-behawioralny</option>
+        <option>Integracyjny</option>
+        <option>Systemowy</option>
+    </select>
+    <input type="text" placeholder = "Nazwisko lub nazwa poradni">
+    <button >Filtruj</button>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.724455679652!2d21.062876315933583!3d52.248388364074685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecdb606031585%3A0xef4dae646bf8044!2sUniwersytet%20SWPS!5e0!3m2!1spl!2spl!4v1666038966400!5m2!1spl!2spl" width="200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<div style="background-color:powderblue; max-width: 25em">
+    <div style = "background-color: aliceblue; border-radius:13%; max-width: 3em;"> avatar</div>
+    <div> stopień naukowy imię i nazwisko</div>
+    <div> ważne filtry: cena, online/offline,miasto</div>
+    <div> krótka wiadomość do pacjenta</div>
+</div>
+
+
+
+{% endblock content %}

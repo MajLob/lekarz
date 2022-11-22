@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1> kontakt </h1>
+
+<h2> Masz pytania? Skontaktuj się z nami</h2>
+<form action="/url" method="GET">
+    <input type="text" placeholder = "podaj swoje imię i nazwisko"class = "imienazwisko" minlength="3" maxlength="20" required>
+    <input type="text" placeholder = "podaj swojego maila" class = "mail" minlength="3" maxlength="20" required>
+    <input type="text" placeholder = "wpisz treść wiadomości"class = "wiadomosc" minlength="3" required>
+</form>
+
+<div><button>wyślij</button></div>
+
+
+
+{% endblock content %}

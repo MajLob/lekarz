@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1> Cennik </h1>
+
+
+<div class = "boczny_pasek">
+    <h2>Avatar</h2>
+    <button>Umówione wizyty</button>
+    <button>Pacjenci</button>
+    <button>Wiadomości</button>
+    <button>Zmień ustawienia konta</button>
+    <button>Wróć</button>
+</div>
+
+<div class = "glowna">
+    <p>aktywny profil</p>
+    <p>30 zł/mies</p>
+    <p>powiązanie z nowym klientem</p>
+    <p>cena jednego spotkania</p>
+    <p>wyświetlanie na pierwszej stronie poszukiwań</p>
+    <p>50zł/tydzień</p>
+</div>
+
+<div class = "mojeplatnosci">
+    <p>moje płatności</p>
+    <p class = "nieuregulowane">status: nieuregulowane: cena</p>
+    <p class ="uregulowane">status: uregulowane</p>
+</div>
+
+<button>Ureguluj płatności</button>
+
+{%endblock content%}

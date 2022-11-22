@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Archivo:wght@600&family=Hind+Siliguri:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        .Logo{
+            font-family: 'Archivo';
+            font-size: 6em;
+            color: black;
+            text-decoration: none;
+            margin-top: 3em;
+            margin-left: 30px;
+
+
+
+        }
+
+        .zaloguj{
+            font-family: 'Archivo';
+            font-size: 20px;
+            display: flex;
+            justify-content: right;
+            margin-right: 1em;
+            margin-top: 1em;
+            padding-top: 7px;
+            padding-left: 10px;
+            padding-bottom: 7px;
+            padding-right: 10px;
+        }
+
+        .calosc{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+        }
+
+        .obraz{
+            width: max-content;
+            margin-left: 2em;
+            margin-bottom: 3em;
+        }
+
+        .prawa{
+            display: grid;
+        }
+
+        .menu{
+            font-family: 'Archivo';
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+            margin-left: 2em;
+            margin-bottom:0;
+            padding:0;
+            row-gap: 0;
+            display: grid;
+            grid-template-rows: 0;
+        }
+    </style>
+</head>
+<body>
+
+{% block content %}
+<!-- <div class="hero">
+    <img src="static/images/hero.png" class ="fotel">
+</div>
+<div class="tresc"></div>
+<a href="/forum/" class="tresc"></a>
+</div> -->
+<div class="zaloguj">
+    <a href = "/"  style="background-color: black; color: white; border-radius: 20px;  text-decoration: none; margin-right: 1em;
+    margin-top: 1em; padding-top: 7px; padding-left: 10px; padding-bottom: 7px; padding-right: 10px;">ZALOGUJ</a>
+</div>
+
+
+
+
+<div class="calosc">
+    <img src="/static/images/image 53.png" class="obraz">
+    <div class="prawa">
+        <a href = "/"  class = "Logo">MINDSET.</a>
+        <a href="/wszyscypsycholodzy/" class = "menu">ZNAJDŹ PSYCHOLOGA</a>
+        <a href="/rejestracjapsycholog/" class = "menu">ZNAJDŹ KLIENTÓW</a>
+        <a href="/forum/" class = "menu">ARTYKUŁY</a>
+        <a href="/forum/" class = "menu">FORUM</a>
+    </div>
+  
+</div>
+
+
+
+
+{%endblock content%}
+</body>
+</html>
+

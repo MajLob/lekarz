@@ -1,0 +1,179 @@
+<div>
+    <form method="POST" action="">
+        <label>Mail</label>
+        <input type="text" name="mail" placeholder="Mail"/>
+        <label>Hasło</label>
+        <input type="text" name="hasło" placeholder="Hasło"/>
+        <label>Powtórz hasło</label>
+        <input type="text" name="powtórz_hasło" placeholder="Powtórz hasło"/>
+
+        <input type="checkbox"> Chcę otrzymywać wiadomości i oferty od [nazwa robocza]
+        <input type="checkbox"> Akceptuję Warunki korzystania z serwisu
+        <p><a href = "https://www.proformat.pl/blog/jak-wykorzystac-recaptcha-na-stronie-www/">reCAPTCHA</a></p>
+
+        <p> Masz już konto? <a href = "/zaloguj/">Zaloguj się</a>.</p>
+
+        <input type="submit" name="Zarejestruj się">
+
+
+
+        {{field.username.label}}
+    {{field.username}}
+
+    {{field.email.label}}
+    {{field.email}}
+
+    {{field.password1.label}}
+    {{field.password1}}
+
+    {{field.password2.label}}
+    {{field.password2}}
+    </form>
+
+
+
+
+
+    {% for message in messages %}
+        <p id="messages">{{message}}</p>
+    {% endfor %}
+
+
+
+
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href = "/rejestracja/">powrót</a>
+<h1>rejestracja klient</h1>
+
+
+<form method="POST" action="">
+    {% csrf_token %} 
+    {{form.username.label}}
+    {{form.username}}
+
+    {{form.email.label}}
+    {{form.email}}
+
+    {{form.password1.label}}
+    {{form.password1}}
+
+    {{form.password2.label}}
+    {{form.password2}}
+
+    <input type="checkbox"> Chcę otrzymywać wiadomości i oferty od [nazwa robocza]
+        <input type="checkbox"> Akceptuję Warunki korzystania z serwisu
+        <p><a href = "https://www.proformat.pl/blog/jak-wykorzystac-recaptcha-na-stronie-www/">reCAPTCHA</a></p>
+
+
+        {{form.errors}}
+
+        <p> Masz już konto? <a href = "/zaloguj/">Zaloguj się</a>.</p>
+
+        <input type="submit" name="Zarejestruj się">
+    
+</form>
+
+
+
+
+
+
+
+
+
+<h1>Rejestracja psycholog</h1>
+
+<a href = "/rejestracja/">powrót</a>
+
+<hr>
+
+<div class = "pasek_postępu">------pasek postępu------</div>
+<div class = "wstep">
+    <input placeholder="Login">
+    <input placeholder="Hasło">
+    <input placeholder="mail">
+</div>
+<div class = "dane_osobiste">
+    <p>Proszę uzupełnić pola:</p>
+    <p>Stopień naukowy, imię i nazwisko</p>
+    <input type="text" placeholder = "mgr Anna Kowalska">
+    <p>płeć</p>
+    <select placeholder = "płeć">
+        <option selected>kobieta</option>
+        <option>mężczyzna</option>
+        <option>inne</option>
+    </select>
+
+    <p>Specjalizacja</p>
+    <select placeholder = "specjalizacja">
+        <option selected>specjalizacja</option>
+        <option>Psycholog</option>
+        <option>Psycholog dziecięcy</option>
+        <option>Psychiatra</option>
+        <option>Seksuolog</option>
+        <option>Neuropsycholog</option>
+        <option>Psychoonkolog</option>
+        <option>Psycholog sportu</option>
+        <option>Psycholog biznesu</option>
+        <option>Psychoterapeuta</option>
+        <option>Pedagog</option>
+    </select>
+    <p>Nurt w którym Pan/i pracuje/</p>
+    <select placeholder = "wybierz nurt terapeutyczny">
+        <option selected>nurt terapeutyczny</option>
+        <option>Psychoanalityczny</option>
+        <option>Psychodynamiczny</option>
+        <option>Poznawczo-behawioralny</option>
+        <option>Integracyjny</option>
+        <option>Systemowy</option>
+    </select>
+    <div>proszę zamieścić skan dyplomu ukończenia studiów  *pole obowiązkowe </div>
+    <input placeholder="telefon kontaktowy">
+    <div>proszę napisać kilka słów o sobie - te informacje będą widoczne dla klientów (opis można zmienić w ustawieniach swojego konta)</div>
+    <input placeholder="wiadomość">
+    <div>
+        <input type = "checkbox"> Pracuję w poradni
+    </div>
+</div>
+
+<hr>
+
+<div class = "dane_poradni">dane poradni</div>
+<input placeholder="nazwa poradni">
+<input placeholder="adres poradni">
+<input placeholder="telefon kontaktowy">
+<input placeholder="mail">
+
+<hr>
+
+<div class = "szczegoly"> szczegóły </div>
+ <p>Ceny usług, które Pan/i świadczy</p>
+<input placeholder="SQL">
+<p>godziny zajęć *tu wyświetlamy kalendarz z godzinami do zaznaczania*</p>
+<p>Czy przyjmuje Pan/i pywatnie czy na NFZ</p>
+<p>Sposób pracy</p>
+    <input type = "checkbox"> online
+    <input type = "checkbox"> offline
+
+<input type="checkbox"> Chcę otrzymywać wiadomości i oferty od [nazwa robocza]
+<input type="checkbox"> Akceptuję Warunki korzystania z serwisu
+<p><a href = "https://www.proformat.pl/blog/jak-wykorzystac-recaptcha-na-stronie-www/">reCAPTCHA</a></p>
+
+<button>Zarejestruj się</button>
+<p> Masz już konto? <a href = "/zaloguj/">Zaloguj się.</a></p>

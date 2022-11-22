@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+
+{% block content%}
+
+<style>
+    .forum-container{
+        display:grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+
+<h1> Forum</h1>
+
+<form method = 'GET' action="{% url 'forum' %}">
+    <input type="text" name="q" placeholder = "Wpisz temat"/>
+</form>
+
+
+
+<div class="forum-container">
+
+    <div>
+        <h3>Wyszukaj temat</h3>
+        <hr>
+        <div>
+            <a href = "{% url 'forum' %}">Wszystkie tematy</a>
+        </div>
+        {% for topic in topics %}
+            <div>
+                <a href = "{% url 'forum' %}?q={{topic.name}}">{{topic.name}}</a>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div>
+        <h5>{{room_count}} ilość tematów</h5>
+        <a href="{% url 'create-room' %}"> Create Room</a>
+
+    
+        <div>
+           {% include 'base/wiadomosci_feed.html' %}
+        </div>
+
+    </div>
+        {% include 'base/activity_component.html'%}
+    <div>
+       
+
+    
+</div>
+
+{% endblock content%}

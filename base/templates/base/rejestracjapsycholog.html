@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" value="Zarejestruj się" />
+    </form>
+        <p>Masz już konto <a href="{% url 'zaloguj' %}">Zaloguj się</a></p>
+</div>
+
+{% endblock content%}
